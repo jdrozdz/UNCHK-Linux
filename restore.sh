@@ -10,7 +10,7 @@ do
 	fi
 done
 
-echo -ne "\nWybierz katalog: ";
+echo -ne "\nSelect directory: ";
 read SelectedDir;
 
 if [ -e $SelectedDir ]; then
@@ -27,7 +27,7 @@ if [ -e $SelectedDir ]; then
 			fi;
 			echo -ne "$i) $el \t";
 		done
-		echo -ne "\nPodaj rozszerzenie dla pliku: ";
+		echo -ne "\nSet file extenion: ";
 		read extension;
 		if [ -e "Restore" ]; then
 			mv $SelectedDir/$fname Restore/$fname.${tablica[$extension]};
